@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-_$j%+gc^@wfeh^2y-m)a+ygutx=hh_b51h4nwo)%b+x5s781_z
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['joellare.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -38,7 +38,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
